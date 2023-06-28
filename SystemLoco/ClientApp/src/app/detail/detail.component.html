@@ -1,0 +1,37 @@
+<h1>Detail for Device: {{deviceId}}</h1>
+<br />
+<div *ngIf="deviceDetails">
+  <div class="details">
+    <label for="device">Device: </label>
+    <input id="device" [(ngModel)]="deviceDetails.device" placeholder="device" /><br />
+    <label for="device-name">Name: </label>
+    <input id="device-name" [(ngModel)]="deviceDetails.name" placeholder="device name" /><br />
+    <label for="device-model">Model: </label>
+    <input id="device-model" [(ngModel)]="deviceDetails.model" placeholder="device model" />
+    <br /><br />
+    <label for="device-location"><b>Location:</b> </label><br />
+    <label for="device-lat">Lat:  </label>
+    <input id="device-lat" [(ngModel)]="deviceDetails.location.lat" placeholder="device location" /><br />
+    <label for="device-lon">Lon: </label>
+    <input id="device-lon" [(ngModel)]="deviceDetails.location.lon" placeholder="device location" /><br />
+    <label for="device-cep">Cep: </label>
+    <input id="device-cep" [(ngModel)]="deviceDetails.location.cep" placeholder="device location" />
+    <br /><br />
+    <label for="device-address">Address: </label>
+    <input id="device-address" [(ngModel)]="deviceDetails.address" placeholder="device address" />
+    <br />
+    <label for="device-company">Company: </label>
+    <input id="device-company" [(ngModel)]="deviceDetails.company" placeholder="device company" />
+    <br /><br />
+    <label for="device-status"><b>Status:</b> </label><br />
+    <label for="device-temperature">Temperature: </label>
+    <input id="device-temperature" [(ngModel)]="deviceDetails.status.temperature" placeholder="device temperature" /><br />
+    <label for="device-movement">Movement: </label>
+    <input id="device-movement" [(ngModel)]="deviceDetails.status.movement" placeholder="device movement" /><br />
+    <label for="device-battery">Movement: </label>
+    <input id="device-battery" [(ngModel)]="deviceDetails.status.batteryLevel" placeholder="device battery level" /><br />
+  </div><br />
+  <button onclick="history.back()" class="button">Back</button>
+</div>
+
+

@@ -1,0 +1,22 @@
+<h1>Devices</h1>
+<br/>
+
+<table class="devices">
+  <tbody>
+    <tr>
+      <th>Device</th>
+      <th>Name</th>
+      <th>Model</th>
+      <th>Last Report</th>
+      <th>Next Update</th>
+    </tr>
+    <tr *ngFor="let dev of deviceList">
+      <td>{{dev.device}}</td>
+      <td><a routerLink="../detail/{{dev.device}}">{{dev.name}}</a></td>
+      <td>{{dev.model}}</td>
+      <td>{{dev.lastReport | date:'yyyy-MM-dd HH:mm'}}</td>
+      <td>{{dev.nextUpdate | date:'yyyy-MM-dd HH:mm'}}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
